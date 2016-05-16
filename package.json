@@ -1,5 +1,5 @@
 {
-  "name": "loopback-connector-db2",
+  "name": "loopback-connector-ibmdb",
   "version": "0.0.1",
   "description": "LoopBack Connector common code for IBM databases",
   "keywords": [
