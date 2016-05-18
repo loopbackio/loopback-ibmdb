@@ -8,12 +8,12 @@ module.exports = require('should');
 var DataSource = require('loopback-datasource-juggler').DataSource;
 
 var config = {
-  username: process.env.IBMDB_USERNAME,
-  password: process.env.IBMDB_PASSWORD,
-  hostname: process.env.IBMDB_HOSTNAME || 'localhost',
-  port: process.env.IBMDB_PORTNUM || 60000,
-  database: process.env.IBMDB_DATABASE || 'testdb',
-  schema: process.env.IBMDB_SCHEMA || 'STRONGLOOP',
+  username: process.env.DB2_USERNAME,
+  password: process.env.DB2_PASSWORD,
+  hostname: process.env.DB2_HOSTNAME || 'localhost',
+  port: process.env.DB2_PORTNUM || 60000,
+  database: process.env.DB2_DATABASE || 'testdb',
+  schema: process.env.DB2_SCHEMA || 'STRONGLOOP',
 };
 
 global.config = config;
