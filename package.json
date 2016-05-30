@@ -1,5 +1,5 @@
 {
-  "name": "loopback-connector-ibmdb",
+  "name": "loopback-ibmdb",
   "version": "1.0.0",
   "description": "LoopBack Connector common code for IBM databases",
   "keywords": [
@@ -35,11 +35,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strongloop/loopback-connector-ibmdb.git"
+    "url": "git://github.com/strongloop/loopback-ibmdb.git"
   },
-  "homepage": "https://github.com/strongloop/loopback-connector-ibmdb",
+  "homepage": "https://github.com/strongloop/loopback-ibmdb",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-connector-ibmdb/issues"
+    "url": "https://github.com/strongloop/loopback-ibmdb/issues"
   },
   "license": "Artistic-2.0"
 }

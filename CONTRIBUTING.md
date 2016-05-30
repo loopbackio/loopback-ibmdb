@@ -1,9 +1,9 @@
 ### Contributing ###
 
-Thank you for your interest in `loopback-connector-ibmdb`, an open source project
+Thank you for your interest in `loopback-ibmdb`, an open source project
 administered by StrongLoop (an IBM Company).
 
-Contributing to `loopback-connector-ibmdb` is easy. In a few simple steps:
+Contributing to `loopback-ibmdb` is easy. In a few simple steps:
 
   * Ensure that your effort is aligned with the project's roadmap by
     talking to the maintainers, especially if you are going to spend a
@@ -14,7 +14,7 @@ Contributing to `loopback-connector-ibmdb` is easy. In a few simple steps:
   * Adhere to code style outlined in the [Google C++ Style Guide][] and
     [Google Javascript Style Guide][].
 
-  * Sign the [Contributor License Agreement](https://cla.strongloop.com/agreements/strongloop/loopback-connector-ibmdb)
+  * Sign the [Contributor License Agreement](https://cla.strongloop.com/agreements/strongloop/loopback-ibmdb)
 
   * Submit a pull request through Github.
 
