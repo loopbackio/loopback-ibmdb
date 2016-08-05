@@ -1,3 +1,9 @@
+2016-08-05, Version 1.0.3
+=========================
+
+ * Add replaceOrCreate support for DB2 (Alex Pitigoi)
+
+
 2016-07-18, Version 1.0.2
 =========================
 
