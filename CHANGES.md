@@ -1,3 +1,11 @@
+2016-08-18, Version 1.0.4
+=========================
+
+ * Remove commented out code (Quentin Presley)
+
+ * Stability fixes (#7) (Quentin Presley)
+
+
 2016-08-05, Version 1.0.3
 =========================
 
