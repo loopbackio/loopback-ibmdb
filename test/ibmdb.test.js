@@ -30,7 +30,7 @@ before(function (done) {
 
 describe('IBMDB -> ', function () {
   describe('executeSQL -> ', function () {
-    it('should set the datasource cnnected/connecting values to false', function (done) {
+    it('should set the datasource connected/connecting values to false', function (done) {
 
         var sql = '';
         var params = '';
