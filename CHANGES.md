@@ -1,3 +1,11 @@
+2016-09-12, Version 1.0.5
+=========================
+
+ * 1.0.5 : Fix connection drop on idle traffic (#10) (Naveen Venkat)
+
+ * Use juggler@3 for running the tests (Candy)
+
+
 2016-08-18, Version 1.0.4
 =========================
 
