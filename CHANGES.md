@@ -1,3 +1,11 @@
+2016-09-22, Version 1.0.7
+=========================
+
+ * Remove CurrentSchema from DSN (Quentin Presley)
+
+ * Need to close connections to return to pool (#13) (Quentin Presley)
+
+
 2016-09-16, Version 1.0.6
 =========================
 
