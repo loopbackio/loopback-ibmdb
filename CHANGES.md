@@ -1,4 +1,10 @@
-2016-09-22, Version 1.0.7
+2016-09-22, Version 1.0.8
+=========================
+
+ * Revert CurrentSchema change (Quentin Presley)
+
+
+2016-09-21, Version 1.0.7
 =========================
 
  * Remove CurrentSchema from DSN (Quentin Presley)
