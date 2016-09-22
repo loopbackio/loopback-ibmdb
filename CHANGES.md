@@ -1,4 +1,12 @@
-2016-09-22, Version 1.0.8
+2016-09-22, Version 1.0.9
+=========================
+
+ * Add CurrentSchema to connStr (Quentin Presley)
+
+ * Update deps to loopback 3.0.0 RC (Miroslav Bajtoš)
+
+
+2016-09-21, Version 1.0.8
 =========================
 
  * Revert CurrentSchema change (Quentin Presley)
