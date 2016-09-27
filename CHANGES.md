@@ -1,3 +1,13 @@
+2016-09-27, Version 1.0.10
+==========================
+
+ * Ensure connection close on failure (#18) (Quentin Presley)
+
+ * Add license text (Candy)
+
+ * Add globalization (Candy)
+
+
 2016-09-22, Version 1.0.9
 =========================
 
