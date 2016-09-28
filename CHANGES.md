@@ -1,3 +1,11 @@
+2016-09-28, Version 1.0.11
+==========================
+
+ * add some simple tests (#19) (Ryan Graham)
+
+ * Debug fixes (#20) (Quentin Presley)
+
+
 2016-09-27, Version 1.0.10
 ==========================
 
