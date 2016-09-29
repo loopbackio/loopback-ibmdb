@@ -21,7 +21,6 @@
     "debug": "^2.2.0",
     "ibm_db": "^1.0.0",
     "loopback-connector": "^2.3.0",
-    "path": "^0.12.7",
     "strong-globalize": "^2.8.0"
   },
   "devDependencies": {
@@ -29,11 +28,7 @@
     "eslint": "^1.10.3",
     "eslint-config-strongloop": "^1.0.2",
     "loopback-datasource-juggler": "^3.0.0",
-    "mocha": "^2.3.4",
-    "rc": "^1.1.5",
-    "should": "^8.1.1",
-    "sinon": "^1.17.2",
-    "bluebird": "^2.9.9"
+    "mocha": "^2.3.4"
   },
   "repository": {
     "type": "git",
