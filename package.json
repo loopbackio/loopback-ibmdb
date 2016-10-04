@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/strongloop/loopback-ibmdb",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-ibmdb/issues"
+    "url": "https://github.com/strongloop/loopback/issues"
   },
   "license": "Artistic-2.0"
 }
