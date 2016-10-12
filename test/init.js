@@ -24,3 +24,8 @@ global.getDataSource = global.getSchema = function(options) {
 };
 
 global.sinon = require('sinon');
+
+global.connectorCapabilities = {
+  ilike: false,
+  nilike: false,
+};
