@@ -20,3 +20,8 @@ global.getDataSource = global.getSchema = function(options) {
   var db = new DataSource(require('../'), config);
   return db;
 };
+
+global.connectorCapabilities = {
+  ilike: false,
+  nilike: false,
+};
