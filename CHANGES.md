@@ -1,3 +1,17 @@
+2016-11-02, Version 1.0.12
+==========================
+
+ * remove connect/lazyconnect (#27) (Quentin Presley)
+
+ * Add initial settings config (#26) (Quentin Presley)
+
+ * Add connectorCapabilities global object (#24) (Nicholas Duffy)
+
+ * Redirect users to log issues in loopback (Candy)
+
+ * deps: remove extraneous dependencies (Ryan Graham)
+
+
 2016-09-28, Version 1.0.11
 ==========================
 

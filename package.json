@@ -1,6 +1,6 @@
 {
   "name": "loopback-ibmdb",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "LoopBack Connector common code for IBM databases",
   "keywords": [
     "IBM",
