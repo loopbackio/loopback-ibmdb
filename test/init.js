@@ -6,12 +6,12 @@
 var DataSource = require('loopback-datasource-juggler').DataSource;
 
 var config = {
-  username: process.env.DB2_USERNAME,
-  password: process.env.DB2_PASSWORD,
-  hostname: process.env.DB2_HOSTNAME || 'localhost',
-  port: process.env.DB2_PORTNUM || 60000,
-  database: process.env.DB2_DATABASE || 'testdb',
-  schema: process.env.DB2_SCHEMA || 'STRONGLOOP',
+  username: process.env.DB2_USERNAME || 'bluadmin',
+  password: process.env.DB2_PASSWORD || 'YTg1MmRlODA4MjAx',
+  hostname: process.env.DB2_HOSTNAME || 'dashdb-txnha-small-yp-dal10-08.services.dal.bluemix.net',
+  port: process.env.DB2_PORTNUM || 50000,
+  database: process.env.DB2_DATABASE || 'BLUDB',
+  schema: process.env.DB2_SCHEMA || 'DB2INST1',
 };
 
 global.config = config;
