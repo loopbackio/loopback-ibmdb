@@ -2,6 +2,9 @@
   "name": "loopback-ibmdb",
   "version": "1.0.12",
   "description": "LoopBack Connector common code for IBM databases",
+  "engines": {
+    "node": ">=4"
+  },
   "keywords": [
     "IBM",
     "StrongLoop",
