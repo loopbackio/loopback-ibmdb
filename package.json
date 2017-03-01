@@ -2,6 +2,9 @@
   "name": "loopback-ibmdb",
   "version": "1.0.12",
   "description": "LoopBack Connector common code for IBM databases",
+  "engines": {
+    "node": ">=4"
+  },
   "keywords": [
     "IBM",
     "StrongLoop",
@@ -20,7 +23,7 @@
     "async": "^1.5.0",
     "debug": "^2.2.0",
     "ibm_db": "^2.0.0",
-    "loopback-connector": "^2.3.0",
+    "loopback-connector": "^3.0.0",
     "strong-globalize": "^2.8.0"
   },
   "devDependencies": {
