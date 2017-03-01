@@ -1,4 +1,6 @@
-2017-03-01, Version 1.1.0
+
+
+2017-02-28, Version 1.1.0
 =========================
 
  * Drop support for node@10,12 (jannyHou)
