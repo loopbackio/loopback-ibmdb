@@ -1,3 +1,23 @@
+2017-03-01, Version 1.1.0
+=========================
+
+ * Drop support for node@10,12 (jannyHou)
+
+ * Upgrade to loopback-connector@3.x (jannyHou)
+
+ * Update ibm_db minimum version (#34) (Quentin Presley)
+
+ * Coerce various pooling configs into integers (#32) (Simon Ho)
+
+ * put issues tab back (siddhipai)
+
+ * Fix issues redirection in package.json (Siddhi Pai)
+
+ * Remove issues warning from README.md (Siddhi Pai)
+
+ * Add translation files (Candy)
+
+
 2016-11-02, Version 1.0.12
 ==========================
 
