@@ -1,3 +1,17 @@
+2017-03-10, Version 2.1.0
+=========================
+
+ * Set connection properties (#44) (Quentin Presley)
+
+ * Fix replaceById bug (Loay)
+
+ * Upgrade to loopback-connector@4.0.0 (jannyHou)
+
+ * Use trim on table name (ssh24)
+
+ * Refactor migration methods (biniam)
+
+
 2017-03-01, Version 2.0.0
 =========================
 
