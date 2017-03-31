@@ -1,3 +1,13 @@
+2017-03-31, Version 2.2.0
+=========================
+
+ * Replace discovery migration (#47) (Quentin Presley)
+
+ * Add debug on alterTable (#46) (Sakib Hasan)
+
+ * refactor alterTable (#45) (Biniam Admikew)
+
+
 2017-03-10, Version 2.1.0
 =========================
 
