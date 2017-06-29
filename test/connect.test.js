@@ -6,7 +6,6 @@
 /* eslint-env node, mocha */
 var EventEmitter = require('events').EventEmitter;
 var IBMDB = require('../').IBMDB;
-require('./init.js');
 
 describe('basic connector', function() {
   var ds = new EventEmitter;

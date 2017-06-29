@@ -5,7 +5,6 @@
 
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
-require('./init.js');
 var assert = require('assert');
 
 var config;
