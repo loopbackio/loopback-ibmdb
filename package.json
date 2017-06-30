@@ -17,7 +17,7 @@
   "scripts": {
     "pretest": "eslint ./ && jscs ./",
     "lint": "eslint ./ && jscs ./",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000 --require test/init.js test/*.js"
   },
   "dependencies": {
     "async": "^1.5.0",
