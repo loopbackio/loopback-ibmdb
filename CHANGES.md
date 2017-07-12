@@ -1,3 +1,15 @@
+2017-07-12, Version 2.2.1
+=========================
+
+ * add test case for fromColumnValue (Diana Lau)
+
+ * fix fromColumnValue when val is undefined (Diana Lau)
+
+ * Remove connection string logging (#50) (Quentin Presley)
+
+ * Make the autoupdate logic much more generic (#48) (Quentin Presley)
+
+
 2017-03-31, Version 2.2.0
 =========================
 
