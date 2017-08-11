@@ -1,7 +1,7 @@
 {
-  "0571bf37847c0e261d6b87e9eedcd673": "Fehler beim Verwenden der Verbindung",
   "5ad265d55cba0590648ab6e4082a7ffc": "Platzhalter für IDs wird nicht unterstützt: {0}",
   "85bdbbfb1bb3e7546e7731eebf414b89": "Maßstab ohne Genauigkeit macht keinen Sinn",
-  "8789d65de441e93990c482e12c39ff9e": "Ungültige Verbindungszeichenfolge: {0}"
+  "8789d65de441e93990c482e12c39ff9e": "Ungültige Verbindungszeichenfolge: {0}",
+  "b71717c454bc1db796a4c5363d9fd078": "Konnte nicht ersetzen. Objekt mit ID {0} ist nicht vorhanden!"
 }
 
