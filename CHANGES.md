@@ -1,3 +1,25 @@
+2017-08-21, Version 2.2.2
+=========================
+
+ * Create Issue and PR Templates (#62) (Sakib Hasan)
+
+ * Update translated strings Q3 2017 (Allen Boone)
+
+ * update translation file (Diana Lau)
+
+ * Add CODEOWNER file (Diana Lau)
+
+ * Override buildExpression from base connector (ssh24)
+
+ * Update linter and rules (ssh24)
+
+ * Fix drop/build primary indexes (ssh24)
+
+ * Fix bad calls to columnEscaped (ssh24)
+
+ * Escape column names on add/change/drop (ssh24)
+
+
 2017-07-12, Version 2.2.1
 =========================
 
