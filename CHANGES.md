@@ -1,3 +1,11 @@
+2017-10-18, Version 2.3.0
+=========================
+
+ * update dependencies (Diana Lau)
+
+ * Add stalebot configuration (Kevin Delisle)
+
+
 2017-08-21, Version 2.2.2
 =========================
 
