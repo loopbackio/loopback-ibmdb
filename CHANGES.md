@@ -1,3 +1,17 @@
+2018-08-17, Version 2.4.0
+=========================
+
+ * Update package versions (#70) (Quentin Presley)
+
+ * Revert change to strong-globalize version (#69) (Quentin Presley)
+
+ * Changing strong-globalize level to 4.1.0 (#68) (Quentin Presley)
+
+ * [WebFM] cs/pl/ru translation (candytangnb)
+
+ * chore: update license (Diana Lau)
+
+
 2017-10-18, Version 2.3.0
 =========================
 
