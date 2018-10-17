@@ -1,4 +1,18 @@
-2018-08-17, Version 2.4.0
+2018-10-17, Version 2.5.0
+=========================
+
+ * Upgrade async dep (Raymond Feng)
+
+ * Fix the code to avoid calling back twice (Raymond Feng)
+
+ * removed CType from transformColumnValue (Ashutosh Ranjan)
+
+ * fixed lint erros (Ashutosh Ranjan)
+
+ * Fix toColumnValue with proper default (#71) (Quentin Presley)
+
+
+2018-08-16, Version 2.4.0
 =========================
 
  * Update package versions (#70) (Quentin Presley)
