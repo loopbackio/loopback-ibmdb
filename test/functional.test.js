@@ -24,4 +24,21 @@ describe('functional test', function() {
     assert.equal(result, undefined);
     done();
   });
+  it('`toColumnValue` function returns ms in the first 3 digits of µs', function(done) {
+    var prop = {
+      type: {
+        name: 'Date'
+      }
+    }
+    var dateValue = new Date(1999, 0, 9, 10, 11, 12, 1)
+    var result = db.connector.toColumnValue(prop, dateValue);
+    assert.equal(result, '1999-01-09-10.11.12.001000');
+    dateValue.setMilliseconds(12);
+    result = db.connector.toColumnValue(prop, dateValue);
+    assert.equal(result, '1999-01-09-10.11.12.012000');
+    dateValue.setMilliseconds(123);
+    result = db.connector.toColumnValue(prop, dateValue);
+    assert.equal(result, '1999-01-09-10.11.12.123000');
+    done(); 
+  });
 });
