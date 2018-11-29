@@ -1,3 +1,13 @@
+2018-11-29, Version 2.5.1
+=========================
+
+ * chore: update CODEOWNERS (Diana Lau)
+
+ * Fix lint errors (Johan Schon)
+
+ * Handle ms part of timestamps correctly for DB2 (Johan Schon)
+
+
 2018-10-17, Version 2.5.0
 =========================
 
