@@ -1,3 +1,13 @@
+2020-01-21, Version 2.6.0
+=========================
+
+ * fix: escape id with columnName if specified (Dominique Emond)
+
+ * feat: drop node 6.x support (Dominique Emond)
+
+ * chore: update copyrights years (Agnes Lin)
+
+
 2018-11-29, Version 2.5.1
 =========================
 
