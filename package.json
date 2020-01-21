@@ -3,7 +3,7 @@
   "version": "2.5.1",
   "description": "LoopBack Connector common code for IBM databases",
   "engines": {
-    "node": ">=6"
+    "node": ">=8.9"
   },
   "keywords": [
     "IBM",
