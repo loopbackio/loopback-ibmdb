@@ -1,3 +1,13 @@
+2020-03-18, Version 2.6.1
+=========================
+
+ * fix: during replace use id column name if present (Dominique Emond)
+
+ * chore: update copyright year (Diana Lau)
+
+ * chore: update CODEOWNERS (Diana Lau)
+
+
 2020-01-21, Version 2.6.0
 =========================
 

@@ -1,0 +1,14 @@
+arch:
+  - arm64
+  - ppc64le
+  - s390x
+branches:
+  only:
+    - master
+language: node_js
+node_js:
+  - 10
+  - 12
+  - 14
+  - 16
+script: npm test --ignore-scripts
