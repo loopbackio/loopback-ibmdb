@@ -28,11 +28,18 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Docker
+        uses: actions/setup-docker@v2
+      - name: Start DB2 container
+        run: |
+         docker run -d --name db2 -e ACCEPT_EULA=TRUE -p 60000:50000 -v db2data:/db2data ibmcom/db2
+      - name: Wait for DB2 to be ready
+        run: sleep 10
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - run: npm ci
       - name: Run test
         run: npm test --ignore-scripts
 
@@ -44,7 +51,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22 # LTS
-      - run: npm install --ignore-scripts
+      - run: npm ci --ignore-scripts
       - name: Verify code linting
         run: npx --no eslint .
 
@@ -60,6 +67,6 @@ jobs:
         with:
           node-version: 22 # LTS
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Verify commit linting
         run: npx commitlint --from origin/master --to HEAD --verbose
