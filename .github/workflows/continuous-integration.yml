@@ -2,14 +2,11 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 permissions: {}
-
-env:
-  NODE_OPTIONS: --max-old-space-size=4096
 
 jobs:
   test:
@@ -19,22 +16,60 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node-version: [20, 22, 24]
-        include:
-          - os: windows-latest
-            node-version: 22 # LTS
-          - os: macos-latest
-            node-version: 22 # LTS
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Start DB2 container
+        run: |
+          docker run -itd --name db2 \
+            --privileged=true \
+            -e LICENSE=accept \
+            -e DB2INST1_PASSWORD=password \
+            -e DBNAME=testdb \
+            -p 60000:50000 \
+            -v db2data:/db2data \
+            ibmcom/db2
+
+      - name: Wait for DB2 instance to be up
+        run: |
+          echo "Waiting for DB2 engine to be ready..."
+          for i in {1..20}; do
+            docker exec db2 su - db2inst1 -c "db2 connect to sample" >/dev/null 2>&1 && break
+            echo "Still waiting ($i)..."
+            sleep 5
+          done
+
+      - name: Wait for testdb to be accessible
+        run: |
+          echo "Waiting for testdb..."
+          for i in {1..20}; do
+            docker exec db2 su - db2inst1 -c "db2 connect to testdb" >/dev/null 2>&1 && break
+            echo "Still waiting ($i)..."
+            sleep 5
+          done
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+
+      - run: npm ci
+
       - name: Run test
         run: npm test --ignore-scripts
+
+      - name: Dump DB2 logs on failure
+        if: failure()
+        run: docker logs db2
+
+      - name: Cleanup DB2 container
+        if: always()
+        run: docker rm -f db2
 
   code-lint:
     name: Code Lint
@@ -43,8 +78,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22 # LTS
-      - run: npm install --ignore-scripts
+          node-version: 22
+      - run: npm ci --ignore-scripts
       - name: Verify code linting
         run: npx --no eslint .
 
@@ -53,13 +88,12 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.pull_request }}
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22 # LTS
-      - name: Install dependencies
-        run: npm install
+          node-version: 22
+      - run: npm ci
       - name: Verify commit linting
         run: npx commitlint --from origin/master --to HEAD --verbose
