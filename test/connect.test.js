@@ -6,12 +6,12 @@
 'use strict';
 
 /* eslint-env node, mocha */
-var EventEmitter = require('events').EventEmitter;
-var IBMDB = require('../').IBMDB;
+const EventEmitter = require('events').EventEmitter;
+const IBMDB = require('../').IBMDB;
 
 describe('basic connector', function() {
-  var ds = new EventEmitter;
-  var connection = null;
+  const ds = new EventEmitter;
+  let connection = null;
 
   it('can be constructed', function(done) {
     ds.connector = new IBMDB('db2', global.config);

@@ -7,11 +7,11 @@
 
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
-var assert = require('assert');
-var EventEmitter = require('events').EventEmitter;
-var IBMDB = require('../').IBMDB;
+const assert = require('assert');
+const EventEmitter = require('events').EventEmitter;
+const IBMDB = require('../').IBMDB;
 
-var db = new EventEmitter;
+const db = new EventEmitter;
 
 describe('functional test', function() {
   before(function(done) {
@@ -20,19 +20,19 @@ describe('functional test', function() {
     done();
   });
   it('`fromColumnValue` function', function(done) {
-    var result = db.connector.fromColumnValue({}, undefined);
+    const result = db.connector.fromColumnValue({}, undefined);
     assert.equal(result, undefined);
     done();
   });
   it('`toColumnValue` function returns ms in the first 3 digits of µs',
     function(done) {
-      var prop = {
+      const prop = {
         type: {
           name: 'Date',
         },
       };
-      var dateValue = new Date(1999, 0, 9, 10, 11, 12, 1);
-      var result = db.connector.toColumnValue(prop, dateValue);
+      const dateValue = new Date(1999, 0, 9, 10, 11, 12, 1);
+      let result = db.connector.toColumnValue(prop, dateValue);
       assert.equal(result, '1999-01-09-10.11.12.001000');
       dateValue.setMilliseconds(12);
       result = db.connector.toColumnValue(prop, dateValue);

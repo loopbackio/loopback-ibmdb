@@ -1,0 +1,65 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions: {}
+
+env:
+  NODE_OPTIONS: --max-old-space-size=4096
+
+jobs:
+  test:
+    name: Test
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [20, 22, 24]
+        include:
+          - os: windows-latest
+            node-version: 22 # LTS
+          - os: macos-latest
+            node-version: 22 # LTS
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - name: Run test
+        run: npm test --ignore-scripts
+
+  code-lint:
+    name: Code Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22 # LTS
+      - run: npm install --ignore-scripts
+      - name: Verify code linting
+        run: npx --no eslint .
+
+  commit-lint:
+    name: Commit Lint
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22 # LTS
+      - name: Install dependencies
+        run: npm install
+      - name: Verify commit linting
+        run: npx commitlint --from origin/master --to HEAD --verbose
