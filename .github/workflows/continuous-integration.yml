@@ -29,12 +29,13 @@ jobs:
         run: |
          docker run -d --name db2 -e ACCEPT_EULA=TRUE -p 60000:50000 -v db2data:/db2data ibmcom/db2
       - name: Wait for DB2 to be ready
-        run: sleep 10
+        run: sleep 50
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+      - run: docker logs -f db2
       - name: Run test
         run: npm test --ignore-scripts
 
