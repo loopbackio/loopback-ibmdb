@@ -5,9 +5,9 @@
 
 'use strict';
 
-var DataSource = require('loopback-datasource-juggler').DataSource;
+const DataSource = require('loopback-datasource-juggler').DataSource;
 
-var config = {
+const config = {
   username: process.env.DB2_USERNAME,
   password: process.env.DB2_PASSWORD,
   hostname: process.env.DB2_HOSTNAME || 'localhost',
@@ -19,7 +19,7 @@ var config = {
 global.config = config;
 
 global.getDataSource = global.getSchema = function(options) {
-  var db = new DataSource(require('../'), config);
+  const db = new DataSource(require('../'), config);
   return db;
 };
 

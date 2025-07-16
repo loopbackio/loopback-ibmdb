@@ -7,9 +7,9 @@
 
 /* eslint-env node, mocha */
 process.env.NODE_ENV = 'test';
-var assert = require('assert');
+const assert = require('assert');
 
-var config;
+let config;
 
 before(function() {
   config = global.config;
