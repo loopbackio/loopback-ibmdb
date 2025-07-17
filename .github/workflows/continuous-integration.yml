@@ -27,7 +27,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - name: Start DB2 container
         run: |
-         docker run -d --name db2 -e ACCEPT_EULA=TRUE -p 60000:50000 -v db2data:/db2data ibmcom/db2
+         docker run -d --name db2 -e ACCEPT_EULA=TRUE -e LICENSE=accept -p 60000:50000 -v db2data:/db2data ibmcom/db2
       - name: Wait for DB2 to be ready
         run: |
           echo "Waiting for DB2 to start..."
