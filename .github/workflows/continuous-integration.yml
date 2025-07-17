@@ -31,7 +31,7 @@ jobs:
       - name: Wait for DB2 to be ready
         run: |
           echo "Waiting for DB2 to start..."
-          for i in {1..100}; do
+          for i in {1..200}; do
             if docker exec db2 su - db2inst1 -c 'db2 connect to sample' > /dev/null 2>&1; then
               echo "DB2 is ready!"
               break
@@ -44,7 +44,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: docker logs -f db2
       - name: Run test
         run: npm test --ignore-scripts
 
