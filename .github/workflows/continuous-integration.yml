@@ -1,0 +1,99 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions: {}
+
+jobs:
+  test:
+    name: Test
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [20, 22, 24]
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Start DB2 container
+        run: |
+          docker run -itd --name db2 \
+            --privileged=true \
+            -e LICENSE=accept \
+            -e DB2INST1_PASSWORD=password \
+            -e DBNAME=testdb \
+            -p 60000:50000 \
+            -v db2data:/db2data \
+            ibmcom/db2
+
+      - name: Wait for DB2 instance to be up
+        run: |
+          echo "Waiting for DB2 engine to be ready..."
+          for i in {1..20}; do
+            docker exec db2 su - db2inst1 -c "db2 connect to sample" >/dev/null 2>&1 && break
+            echo "Still waiting ($i)..."
+            sleep 5
+          done
+
+      - name: Wait for testdb to be accessible
+        run: |
+          echo "Waiting for testdb..."
+          for i in {1..20}; do
+            docker exec db2 su - db2inst1 -c "db2 connect to testdb" >/dev/null 2>&1 && break
+            echo "Still waiting ($i)..."
+            sleep 5
+          done
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm ci
+
+      - name: Run test
+        run: npm test --ignore-scripts
+
+      - name: Dump DB2 logs on failure
+        if: failure()
+        run: docker logs db2
+
+      - name: Cleanup DB2 container
+        if: always()
+        run: docker rm -f db2
+
+  code-lint:
+    name: Code Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --ignore-scripts
+      - name: Verify code linting
+        run: npx --no eslint .
+
+  commit-lint:
+    name: Commit Lint
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Verify commit linting
+        run: npx commitlint --from origin/master --to HEAD --verbose

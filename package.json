@@ -1,6 +1,6 @@
 {
   "name": "loopback-ibmdb",
-  "version": "2.6.2",
+  "version": "2.6.1",
   "description": "LoopBack Connector common code for IBM databases",
   "engines": {
     "node": ">=20"
@@ -16,22 +16,25 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "mocha --timeout 10000 --require test/init.js test/*.js",
     "posttest": "npm run lint"
   },
   "dependencies": {
     "async": "^3.2.6",
     "debug": "^4.4.1",
-    "ibm_db": "^3.3.0",
+    "ibm_db": "^3.3.2",
     "loopback-connector": "^6.2.6",
     "strong-globalize": "^6.0.6"
   },
   "devDependencies": {
-    "eslint": "^9.31.0",
+    "eslint": "^8.57.1",
     "eslint-config-loopback": "^13.1.0",
     "jscs": "^3.0.7",
     "loopback-datasource-juggler": "^5.1.10",
-    "mocha": "^11.7.1"
+    "mocha": "^11.7.1",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0"
   },
   "repository": {
     "type": "git",
