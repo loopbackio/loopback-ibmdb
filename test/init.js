@@ -8,8 +8,8 @@
 const DataSource = require('loopback-datasource-juggler').DataSource;
 
 const config = {
-  username: process.env.DB2_USERNAME,
-  password: process.env.DB2_PASSWORD,
+  username: process.env.DB2_USERNAME || 'db2inst1',
+  password: process.env.DB2_PASSWORD || 'password',
   hostname: process.env.DB2_HOSTNAME || 'localhost',
   port: process.env.DB2_PORTNUM || 60000,
   database: process.env.DB2_DATABASE || 'testdb',
