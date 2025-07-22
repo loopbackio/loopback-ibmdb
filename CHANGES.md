@@ -1,3 +1,19 @@
+2025-07-21, Version 3.0.0
+=========================
+
+ * chore: fix ci (dhmlau)
+
+ * chore: add CI - commit and code linting (dhmlau)
+
+ * fix: update ibm_db version for Mac ARM64 node.js > 20 (Max Pochet)
+
+ * docs: add SECURITY.md (Diana Lau)
+
+ * docs: update coc (Diana Lau)
+
+ * docs: add code of conduct (Diana Lau)
+
+
 2020-03-18, Version 2.6.1
 =========================
 
