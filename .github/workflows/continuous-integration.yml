@@ -44,15 +44,6 @@ jobs:
             sleep 5
           done
 
-      - name: Wait for testdb to be accessible
-        run: |
-          echo "Waiting for testdb..."
-          for i in {1..20}; do
-            docker exec db2 su - db2inst1 -c "db2 connect to testdb" >/dev/null 2>&1 && break
-            echo "Still waiting ($i)..."
-            sleep 5
-          done
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
