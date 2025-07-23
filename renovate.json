@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":gitSignOff",
+    ":ignoreModulesAndTests",
+    ":prConcurrentLimit10",
+    "workarounds:typesNodeVersioning"
+  ],
+  "lockFileMaintenance": {
+    "extends": [
+      "schedule:monthly"
+    ],
+    "enabled": true,
+    "automerge": true
+  }
+}
