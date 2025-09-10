@@ -1,3 +1,27 @@
+2025-09-10, Version 3.0.1
+=========================
+
+ * fix(deps): update dependency loopback-connector to v6.2.11 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v5.2.1 (renovate[bot])
+
+ * fix(deps): update dependency ibm_db to v3.3.3 (renovate[bot])
+
+ * chore(deps): update actions/setup-node action to v5 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v11.7.2 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v5.1.11 (renovate[bot])
+
+ * chore(deps): update actions/checkout action to v5 (renovate[bot])
+
+ * fix(deps): update dependency loopback-connector to v6.2.7 (renovate[bot])
+
+ * chore: add renovate bot (dhmlau)
+
+ * chore: delete useless step (Max Pochet)
+
+
 2025-07-21, Version 3.0.0
 =========================
 
