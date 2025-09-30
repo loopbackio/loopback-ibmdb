@@ -34,7 +34,7 @@
     "loopback-datasource-juggler": "^5.1.10",
     "mocha": "^11.7.1",
     "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^19.0.0"
+    "@commitlint/config-conventional": "^20.0.0"
   },
   "repository": {
     "type": "git",
