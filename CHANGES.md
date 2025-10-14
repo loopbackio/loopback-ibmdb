@@ -1,3 +1,21 @@
+2025-10-14, Version 3.0.2
+=========================
+
+ * chore(deps): update actions/setup-node action to v6 (renovate[bot])
+
+ * chore(deps): update dependency ibm_db to v3.3.4 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v11.7.4 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#117) (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v20 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v20 (renovate[bot])
+
+ * chore(deps): update dependency debug to v4.4.3 (renovate[bot])
+
+
 2025-09-10, Version 3.0.1
 =========================
 
