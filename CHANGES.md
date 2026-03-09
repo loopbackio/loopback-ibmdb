@@ -1,3 +1,19 @@
+2026-03-09, Version 3.0.7
+=========================
+
+ * chore(deps): update dependency loopback-connector to v7.0.4 (renovate[bot])
+
+ * chore(deps): update dependency ibm_db to v3.3.5 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v20.4.3 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v20.4.3 (renovate[bot])
+
+ * chore(deps): update docker/setup-buildx-action action to v4 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#150) (renovate[bot])
+
+
 2026-02-09, Version 3.0.6
 =========================
 
