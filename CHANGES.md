@@ -1,3 +1,21 @@
+2026-04-14, Version 3.0.8
+=========================
+
+ * chore(deps): update dependency loopback-connector to v7.0.5 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v6.0.5 (renovate[bot])
+
+ * fix(deps): update dependency ibm_db to v4 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#158) (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v20.5.0 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v20.5.0 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v6.0.4 (renovate[bot])
+
+
 2026-03-09, Version 3.0.7
 =========================
 
