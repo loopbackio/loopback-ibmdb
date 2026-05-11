@@ -1,3 +1,17 @@
+2026-05-11, Version 3.0.9
+=========================
+
+ * chore(deps): update dependency loopback-connector to v7.0.6 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21 (renovate[bot])
+
+ * chore(deps): lock file maintenance (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v20.5.3 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v20.5.3 (renovate[bot])
+
+
 2026-04-14, Version 3.0.8
 =========================
 
