@@ -1,3 +1,19 @@
+2026-07-16, Version 4.0.0
+=========================
+
+ * chore: drop Node.js 20 support (dhmlau)
+
+ * Revert "chore: drop Node.js 20 support" (dhmlau)
+
+ * chore(deps): update dependency @commitlint/cli to v21 (renovate[bot])
+
+ * chore(deps): update dependency ibm_db to v4.0.1 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21.0.1 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v6.0.6 (renovate[bot])
+
+
 2026-05-11, Version 3.0.9
 =========================
 
