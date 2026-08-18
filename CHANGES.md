@@ -1,4 +1,6 @@
-2026-07-16, Version 4.0.0
+
+
+2026-07-15, Version 4.0.0
 =========================
 
  * chore: drop Node.js 20 support (dhmlau)
