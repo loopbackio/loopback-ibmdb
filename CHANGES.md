@@ -1,3 +1,81 @@
+2026-11-13, Version 3.0.10
+==========================
+
+ * chore(deps): update dependency loopback-connector to v8.0.4 (renovate[bot])
+
+ * chore(deps): update dependency ibm_db to v4.1.0 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21.2.4 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v21.2.4 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v7.0.4 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v12.0.3 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21.2.3 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v21.2.3 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v12.0.2 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v7.0.3 (renovate[bot])
+
+ * chore(deps): update dependency loopback-connector to v8.0.3 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v12.0.1 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v12 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#193) (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v7.0.2 (renovate[bot])
+
+ * chore(deps): update dependency loopback-connector to v8.0.2 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21.2.2 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v21.2.2 (renovate[bot])
+
+ * chore(deps): update dependency mocha to v11.8.0 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#186) (renovate[bot])
+
+ * chore(deps): update dependency loopback-connector to v8.0.1 (renovate[bot])
+
+ * chore(deps): update actions/setup-node action to v7 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v21.2.1 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#182) (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v21.2.0 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21.1.0 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/cli to v21.1.0 (renovate[bot])
+
+ * chore(deps): update actions/checkout action to v7 (renovate[bot])
+
+ * fix(deps): update dependency loopback-connector to v8 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v7 (renovate[bot])
+
+ * chore(deps): lock file maintenance (#174) (renovate[bot])
+
+ * chore: drop Node.js 20 support (dhmlau)
+
+ * Revert "chore: drop Node.js 20 support" (dhmlau)
+
+ * chore(deps): update dependency @commitlint/cli to v21 (renovate[bot])
+
+ * chore(deps): update dependency ibm_db to v4.0.1 (renovate[bot])
+
+ * chore(deps): update dependency @commitlint/config-conventional to v21.0.1 (renovate[bot])
+
+ * chore(deps): update dependency loopback-datasource-juggler to v6.0.6 (renovate[bot])
+
+
 2026-05-11, Version 3.0.9
 =========================
 
